@@ -142,3 +142,15 @@ CSRF_TRUSTED_ORIGINS = ['https://u240287-8000.theiadockernext-0-labs-prod-theiak
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'u240287-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
 CSRF_TRUSTED_ORIGINS = ['https://u240287-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+
+import os
+TEMPLATES[0]['DIRS'] = [
+    os.path.join(str(BASE_DIR), 'frontend/static'),
+    os.path.join(str(BASE_DIR), 'frontend/build'),
+    os.path.join(str(BASE_DIR), 'frontend/build/static'),
+]
+STATICFILES_DIRS = [
+    os.path.join(str(BASE_DIR), 'frontend/static'),
+    os.path.join(str(BASE_DIR), 'frontend/build'),
+    os.path.join(str(BASE_DIR), 'frontend/build/static'),
+]
